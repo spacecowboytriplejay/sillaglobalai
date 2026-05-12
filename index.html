@@ -57,11 +57,18 @@
   }
 
   .brand {
-    font-family: ui-serif, Georgia, serif;
-    font-size: 20px;
-    letter-spacing: 0.02em;
-    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
+    line-height: 0;
+  }
+
+  .brand-logo {
+    display: block;
+    width: 156px;
+    height: auto;
+    max-height: 34px;
+    object-fit: contain;
   }
 
   .nav-links {
@@ -436,6 +443,7 @@
 
   @media (max-width: 900px) {
     .nav { padding: 20px 24px; flex-direction: column; gap: 16px; }
+    .brand-logo { width: 138px; max-height: 31px; }
     .nav-links { flex-wrap: wrap; justify-content: center; gap: 18px; }
     .container { padding-left: 24px; padding-right: 24px; }
     .hero { padding-top: 78px; padding-bottom: 88px; }
@@ -452,7 +460,7 @@
 <body>
 <div class="page">
   <nav class="nav" aria-label="Primary navigation">
-    <a class="brand" href="#top">sillaGlobal</a>
+    <a class="brand" href="#top" aria-label="Silla Global home"><img class="brand-logo" src="SillaGlobalLogo.png" alt="Silla Global"></a>
     <div class="nav-links">
       <a href="#thesis">Thesis</a>
       <a href="#audit">Audit</a>
