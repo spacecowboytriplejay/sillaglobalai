@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Silla Global | Frontier Systems Audit and Company Thesis</title>
-<meta name="description" content="Silla Global builds and operates next generation frontier systems across intelligence, bits, electrons, atoms, capital and institutions. Apply for a Frontier Systems Audit or read the company thesis.">
+<title>Silla Global | Frontier AI Platform · Built from Africa · Deployed Globally</title>
+<meta name="description" content="Silla Global is a next generation engagement platform with industry leaders. We provide holistic solutions delivered through artificial intelligence to support the transformation journey of visionary leaders, innovators, entrepreneurs, purpose-driven organisations, women and youth.">
 <style>
   :root {
     --bg: #0A0A0A;
@@ -22,7 +21,6 @@
   }
 
   * { box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -34,7 +32,6 @@
   }
 
   a { color: inherit; }
-
   a:hover, button:hover { opacity: 0.82; transition: opacity 0.2s ease; }
 
   .page {
@@ -150,15 +147,8 @@
     cursor: pointer;
   }
 
-  .button-primary {
-    color: #0A0A0A;
-    background: var(--gold);
-  }
-
-  .button-secondary {
-    color: var(--gold);
-    background: transparent;
-  }
+  .button-primary { color: #0A0A0A; background: var(--gold); }
+  .button-secondary { color: var(--gold); background: transparent; }
 
   .trust-strip {
     border-top: 0.5px solid var(--line-soft);
@@ -285,6 +275,32 @@
     margin-bottom: 0;
   }
 
+  .stack-sub {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    color: var(--gold);
+    margin-top: 10px;
+    margin-bottom: 6px;
+    letter-spacing: 0.06em;
+    opacity: 0.82;
+  }
+
+  .stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .stack-tag {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: rgba(212,166,74,0.80);
+    border: 0.5px solid rgba(212,166,74,0.28);
+    padding: 4px 10px;
+  }
+
   .quote-band {
     background: var(--panel);
     border-top: 0.5px solid var(--line-soft);
@@ -323,6 +339,143 @@
     font-size: 14px;
   }
 
+  /* ORGANOGRAM */
+  .organogram {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .org-parent {
+    border: 0.5px solid var(--gold);
+    background: var(--gold-soft);
+    padding: 18px 40px;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+  }
+
+  .org-connector {
+    width: 0.5px;
+    height: 32px;
+    background: var(--line);
+  }
+
+  .org-children {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    width: 100%;
+    max-width: 720px;
+  }
+
+  .org-child {
+    border: 0.5px solid var(--line);
+    background: var(--panel-soft);
+    padding: 20px 22px;
+    text-align: center;
+  }
+
+  .org-child-name {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .org-child a {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(232,230,224,0.55);
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(232,230,224,0.22);
+    padding-bottom: 2px;
+  }
+
+  /* TEAM */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 44px;
+  }
+
+  .team-card {
+    border: 0.5px solid var(--line);
+    background: var(--panel-soft);
+    padding: 28px 24px;
+  }
+
+  .team-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--gold-soft);
+    border: 0.5px solid rgba(212,166,74,0.38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 18px;
+    letter-spacing: 0.04em;
+  }
+
+  .team-name {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+
+  .team-role {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .team-bio {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+    color: rgba(232,230,224,0.58);
+    margin-bottom: 0;
+  }
+
+  /* PARTNERS */
+  .partners-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .partner-badge {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(232,230,224,0.62);
+    border: 0.5px solid var(--line);
+    padding: 12px 20px;
+    background: var(--panel-soft);
+  }
+
+  /* APPLICATION */
   .application-shell {
     background: linear-gradient(180deg, rgba(212,166,74,0.08), rgba(255,255,255,0.02));
     border: 0.5px solid rgba(212,166,74,0.22);
@@ -361,7 +514,6 @@
   }
 
   textarea { min-height: 120px; resize: vertical; }
-
   input:focus, select:focus, textarea:focus { border-color: var(--gold); }
 
   .checkbox-line {
@@ -410,186 +562,281 @@
 
   .modal-content {
     width: min(640px, 100%);
-    background: #11110F;
-    border: 0.5px solid rgba(212,166,74,0.32);
-    padding: 42px;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.48);
-  }
-
-  .modal-content p {
-    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: var(--muted);
-    line-height: 1.7;
+    background: var(--panel);
+    border: 0.5px solid var(--line);
+    padding: 48px;
   }
 
   footer {
-    padding-top: 44px;
-    padding-bottom: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 24px;
+    padding: 32px 56px;
+    border-top: 0.5px solid var(--line-soft);
     font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 12px;
+    color: var(--quiet);
     letter-spacing: 0.06em;
-    color: rgba(232,230,224,0.44);
   }
 
   .footer-links {
     display: flex;
-    gap: 24px;
+    gap: 28px;
   }
 
   .footer-links a { text-decoration: none; }
 
-  @media (max-width: 900px) {
-    .nav { padding: 20px 24px; flex-direction: column; gap: 16px; }
-    .brand-logo { width: 138px; max-height: 31px; }
+  @media (max-width: 860px) {
+    .nav { padding: 18px 24px; }
     .nav-links { flex-wrap: wrap; justify-content: center; gap: 18px; }
     .container { padding-left: 24px; padding-right: 24px; }
-    .hero { padding-top: 78px; padding-bottom: 88px; }
-    h1 { font-size: 44px; }
-    h2 { font-size: 29px; }
+    h1 { font-size: 42px; }
     .section-grid, .authority-grid, .stack-item { grid-template-columns: 1fr; gap: 22px; }
     .section-number { padding-top: 0; }
-    .cards, .trust-strip .container, form { grid-template-columns: 1fr; }
-    .quote { font-size: 30px; }
-    footer { flex-direction: column; align-items: flex-start; }
+    .cards { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: 1fr 1fr; }
+    .org-children { grid-template-columns: 1fr; }
+    footer { flex-direction: column; align-items: flex-start; gap: 16px; }
+  }
+
+  @media (max-width: 540px) {
+    h1 { font-size: 32px; }
+    .team-grid { grid-template-columns: 1fr; }
+    .trust-strip .container { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
 <body>
 <div class="page">
+
   <nav class="nav" aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="Silla Global home"><img class="brand-logo" src="SillaGlobalLogo.png" alt="Silla Global"></a>
+    <a class="brand" href="#top" aria-label="Silla Global home">
+      <img class="brand-logo" src="SillaGlobalLogo.png" alt="Silla Global" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+      <span style="display:none;font-family:ui-sans-serif,sans-serif;font-size:15px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold)">SILLA GLOBAL</span>
+    </a>
     <div class="nav-links">
-      <a href="#thesis">Thesis</a>
-      <a href="#audit">Audit</a>
-      <a href="#architecture">Architecture</a>
-      <a href="/theway">The Way</a>
-      <a href="#application">Apply</a>
+      <a href="#about">About Us</a>
+      <a href="#universe">Silla Universe</a>
+      <a href="#architecture">Our Architecture</a>
+      <a href="#partners">Silla Partners</a>
+      <a href="#register">Register</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
   <main id="top">
+
+    <!-- HERO -->
     <section class="hero container">
-      <div class="eyebrow">Frontier Systems · Built from Africa · Deployed Globally</div>
-      <h1>The frontier systems company building the operating system for Africa's transition.</h1>
-      <p class="hero-copy">Silla Global builds and operates next generation front-end systems with industry leaders. We operate from the intelligence layer to bits, atoms, electrons, capital, and the institutions that hold them together. We do not work with everyone. We select mandates where AI, infrastructure, capital, policy and execution must become one system.</p>
+      <div class="eyebrow">Frontier AI Platform &middot; Built from Africa &middot; Deployed Globally</div>
+      <h1>A cutting-edge engagement platform built to support Africa's transition towards AI.</h1>
+      <p class="hero-copy">Silla Global is a next generation engagement platform with industry leaders that walk the talk. We provide holistic solutions delivered through artificial intelligence to support the transformation journey of visionary leaders, innovators, entrepreneurs, purpose-driven organisations, women and youth. We carefully select mandates where AI, infrastructure, capital, policy and execution align and produce high impact results for greater good.</p>
       <div class="cta-row">
-        <a class="button button-primary" href="#application">Apply to work with Silla Global</a>
-        <a class="button button-secondary" href="#thesis">Read the company thesis</a>
+        <a class="button button-primary" href="#register">Register with Silla Global</a>
+        <a class="button button-secondary" href="#universe">Read the Silla Universe</a>
       </div>
     </section>
 
+    <!-- TRUST STRIP -->
     <div class="trust-strip">
       <div class="container">
-        <div>Government level advisory context</div>
-        <div>G20 and global economic forum rooms</div>
-        <div>Institutional capital and infrastructure</div>
-        <div>AI, energy, minerals and deployment systems</div>
+        <div>People &middot; Planet &middot; Profits &middot; Purpose</div>
+        <div>AI &middot; Infrastructure &middot; Capital &middot; Policy</div>
+        <div>Built from Africa &middot; Deployed Globally</div>
+        <div>Selective mandates &middot; High impact results</div>
       </div>
     </div>
 
-    <section id="thesis" class="block container">
+    <!-- 01 ABOUT / SILLA UNIVERSE -->
+    <section id="about" class="block container">
       <div class="section-grid">
         <div class="section-number">01</div>
         <div>
-          <h2>Company thesis</h2>
+          <h2 id="universe">The Silla Universe</h2>
           <div class="serif-copy">
-            <p>Every fifty to one hundred years, a new infrastructure cycle replaces the last one. The group that builds the new rails owns the next era. Steel. Electricity. Oil. Semiconductors. The internet. AI and physical intelligence now form the next operating layer.</p>
-            <p>Africa cannot afford to enter this cycle as a passive consumer of someone else's stack. The continent holds the minerals, energy, young population, mobility demand, institutional whitespace and sovereign urgency that the next era requires. The strategic question is whether these layers remain fragmented or are coordinated into an operating system.</p>
-            <p>Silla Global was built to hold that position. We design, deploy and capitalise the full-stack architecture across intelligence, bits, electrons, atoms, capital and the institutions that hold them together.</p>
-            <p>The thesis is simple. The future will not be won by applications alone. It will be won by the frontier systems that connect compute, energy, data, policy, finance, infrastructure and human alignment into compounding deployment loops.</p>
+            <p>Every hundred years, a new infrastructure cycle emerges to replace the last and trailblazers that build the new rails lead the next era. The internet evolution, AI and spiritual intelligence now form the next operating layer.</p>
+            <p>Africa cannot afford to enter this new cycle as a passive consumer of someone else's stack. The continent holds the indigenous knowledge, minerals, energy, young population, mobility demand, institutional whitespace and sovereign urgency that the next era requires. The strategic question is whether these layers remain fragmented or intentionally coordinated into one seamless solution that can create new industries, transform lives and improve livelihoods.</p>
+            <p>Silla Global was formed to design, deploy and leverage human capital, shared knowledge, artificial intelligence and innovative institutions that take humanity forward.</p>
+            <p>Our philosophy is simple. The future will not be won by applications, podcasts or social media alone. It will be driven by those that know how to align energy, data, policy, finance and infrastructure into practical deployment cycles year on year.</p>
           </div>
           <div class="cta-row" style="margin-top: 34px;">
-            <a class="button button-primary" href="#application">Request a Frontier Systems Audit</a>
-            <a class="button button-secondary" href="#architecture">View the operating architecture</a>
+            <a class="button button-primary" href="#register">Request Alignment Audit</a>
+            <a class="button button-secondary" href="#architecture">View Our Guidelines</a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ORGANOGRAM -->
+    <section class="block container">
+      <div class="section-grid">
+        <div class="section-number">&nbsp;</div>
+        <div>
+          <h2>Silla Organogram</h2>
+          <div class="organogram">
+            <div class="org-parent">Silla Global</div>
+            <div class="org-connector"></div>
+            <div class="org-children">
+              <div class="org-child">
+                <div class="org-child-name">Silla Global</div>
+                <a href="#" onclick="alert('Company profile coming soon.');return false;">Download Company Profile</a>
+              </div>
+              <div class="org-child">
+                <div class="org-child-name">Silla Green</div>
+                <a href="#" onclick="alert('Company profile coming soon.');return false;">Download Company Profile</a>
+              </div>
+              <div class="org-child">
+                <div class="org-child-name">Silla Capital</div>
+                <a href="#" onclick="alert('Company profile coming soon.');return false;">Download Company Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE TEAM -->
+    <section class="block container">
+      <div class="section-grid">
+        <div class="section-number">&nbsp;</div>
+        <div>
+          <h2>Core Team</h2>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar">DK</div>
+              <div class="team-name">Dr. Khumoetsile Moetse</div>
+              <div class="team-role">Group Chairperson</div>
+              <p class="team-bio">HRH Ambassador and Princess of Bataba boo Lekoma. Diplomat, humanitarian and stewardship leader with over twenty years at the intersection of government, diplomacy and African relations.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">JS</div>
+              <div class="team-name">Joshua Silvanus</div>
+              <div class="team-role">Company Secretary</div>
+              <p class="team-bio">Responsible for governance, corporate structure and the operational alignment of Silla Global's mandates across subsidiaries and strategic partnerships.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">NT</div>
+              <div class="team-name">Nomfundo Tshabalala</div>
+              <div class="team-role">Chief Executive Officer</div>
+              <p class="team-bio">Leads the execution of Silla Global's strategic mandate. Responsible for aligning the organisation's vision with practical deployment across all business units.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">JJ</div>
+              <div class="team-name">Jean Janse van Rensburg</div>
+              <div class="team-role">Lead Executive: Digital Transformation</div>
+              <p class="team-bio">Drives Silla Global's AI and digital infrastructure strategy. Leads the design and deployment of intelligent systems across the organisation's technology layer.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">DD</div>
+              <div class="team-name">Docky Johannes Dithejane</div>
+              <div class="team-role">Lead Executive: Business Development</div>
+              <p class="team-bio">Responsible for identifying, qualifying and activating strategic mandates. Builds and manages the relationships that bring Silla Global's architecture to life.</p>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">RS</div>
+              <div class="team-name">Ronny Stengert</div>
+              <div class="team-role">Lead Executive: Creative Works</div>
+              <p class="team-bio">Leads Silla Global's creative and media strategy. Responsible for narrative infrastructure, content intelligence and the visual identity of the organisation's platforms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 NOT A VENDOR -->
     <section id="audit" class="block container">
       <div class="section-grid">
         <div class="section-number">02</div>
         <div>
-          <h2>Not a vendor. Not a generic consultancy. A selective frontier systems partner.</h2>
+          <h2>Not a vendor. Not a consultancy. A bespoke solutions partner.</h2>
           <div class="serif-copy">
-            <p>Our work sits in the rooms where governments, institutional capital, strategic operators, G20 aligned economic discussions, World Economic Forum communities and tier-one advisory firms such as PwC and McKinsey shape execution agendas. That context creates a different standard for who we work with.</p>
-            <p>A Frontier Systems Audit is the first filter. It helps us assess whether your mandate is serious enough, resourced enough and strategically aligned enough for Silla Global to engage.</p>
+            <p>Our unique work already sits in rooms where key individuals, influencers, thought leaders, governments, companies, investors and institutions strive to align economic discussions.</p>
+            <p>An internal alignment audit is the first filter. It helps us assess whether your vision is aligned to your daily activities, and led sufficiently by purpose-driven leaders in the forefront.</p>
           </div>
           <div class="cards">
             <div class="card">
-              <div class="card-label">Mandate quality</div>
+              <div class="card-label">Mandate Quality</div>
               <h3>We assess the size of the problem.</h3>
-              <p>We look for projects connected to infrastructure, AI, capital formation, sovereign systems, strategic media, energy, minerals, mobility or institutional transformation.</p>
+              <p>We prioritize empowerment of lead executives and visionaries, digital transformation, strategic media engagement, renewable energy that supports climate change, e-mining and trading, mobility.</p>
             </div>
             <div class="card">
-              <div class="card-label">Execution capacity</div>
+              <div class="card-label">Execution Capacity</div>
               <h3>We size the ability to move.</h3>
-              <p>The form qualifies your available implementation capacity, decision authority, timeline and operational seriousness before our team spends time on the mandate.</p>
+              <p>The form qualifies your available implementation capacity, strategic decision authority, timeline and operational willingness to move before our team invests time on the mandate.</p>
             </div>
             <div class="card">
-              <div class="card-label">Strategic fit</div>
+              <div class="card-label">Strategic Fit</div>
               <h3>We choose alignment first.</h3>
-              <p>We do not optimise for every opportunity. We prioritise mandates where the system can compound over years, not campaigns that vanish after a quarter.</p>
+              <p>We do not optimise for every opportunity. We prioritise mandates where the system can compound over years, not campaigns or opportunities that vanish in a short cycle.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 03 ARCHITECTURE -->
     <section id="architecture" class="block container">
       <div class="section-grid">
         <div class="section-number">03</div>
         <div>
-          <h2>The operating architecture</h2>
+          <h2>Our Architecture</h2>
           <div class="serif-copy">
-            <p>New systems are built by people who understand the old ones well enough to know where they break. We operate inside a deliberate architecture across technology, energy, infrastructure, capital, sovereign authority, policy, operations and distribution.</p>
+            <p>New systems are built by people who understand the old ones well enough to know when they break, where to leverage them and how to transform and create the new.</p>
           </div>
           <div class="stack-list">
             <div class="stack-item">
+              <div class="stack-title">Alignment</div>
+              <div>
+                <h3>Internal Alignment</h3>
+                <p>Mentorship, leadership coaching, spiritual alignment and the institutional summits that shape how leaders show up in the world.</p>
+                <div class="stack-tags">
+                  <span class="stack-tag">The Way</span>
+                  <span class="stack-tag">Mentorship &amp; Leadership Coaching</span>
+                  <span class="stack-tag">Spiritual Alignment Consulting</span>
+                  <span class="stack-tag">The Fourth Bottomline Seminar</span>
+                  <span class="stack-tag">The First Ladies Summit</span>
+                </div>
+              </div>
+            </div>
+            <div class="stack-item">
               <div class="stack-title">Intelligence</div>
               <div>
-                <h3>Sovereign AI, data infrastructure and decision systems.</h3>
-                <p>AI advisory, proprietary intelligence products, ground-truth datasets, operational analytics and systems that convert deployment into feedback.</p>
+                <h3>Sovereign AI, data infrastructure and decision-making systems.</h3>
+                <p>AI advisory, proprietary intelligence products, ground-truth datasets, operational analytics and systems that convert deployment into results.</p>
               </div>
             </div>
             <div class="stack-item">
-              <div class="stack-title">Bits</div>
+              <div class="stack-title">Engagement</div>
               <div>
-                <h3>Media, software and institutional narrative infrastructure.</h3>
-                <p>AI-native content systems, audience intelligence, platform IP and the distribution logic required to shape belief, demand and adoption.</p>
+                <h3>Media software and engagement platforms.</h3>
+                <p>AI-generated content and advertising solutions, audience intelligence, digital IP and distribution platforms for edutainment with purpose. Required to influence change, healing, transformation and personal success.</p>
+                <div class="stack-sub">Connected platforms</div>
+                <div class="stack-tags">
+                  <span class="stack-tag">The Roots</span>
+                  <span class="stack-tag">My Truth</span>
+                  <span class="stack-tag">The Well</span>
+                </div>
               </div>
             </div>
             <div class="stack-item">
-              <div class="stack-title">Electrons</div>
+              <div class="stack-title">Energy</div>
               <div>
-                <h3>Energy systems that power compute, mobility and industry.</h3>
-                <p>Generation, storage, distribution, charging networks and the intelligent coordination layer that turns electrons into economic throughput.</p>
+                <h3>Renewable energy solutions that power mobility and industry.</h3>
+                <p>Generation, storage and distribution of renewable energy for charging networks of electric vehicles. AI platform layer that turns electrons into economic throughput.</p>
               </div>
             </div>
             <div class="stack-item">
-              <div class="stack-title">Atoms</div>
+              <div class="stack-title">Automation</div>
               <div>
-                <h3>Physical infrastructure, minerals, mobility and industrial build-out.</h3>
-                <p>Critical mineral access, data centre shells, electric mobility, industrial sites, logistics and the physical mass the transition is built from.</p>
+                <h3>Renewable energy, e-mining and e-mobility solutions.</h3>
+                <p>Green corridors access, electric mobility, AI logistics solutions, supply and distribution of electric vehicles and charging networks backed by renewable energy. AI utility platforms for fare collection and economic throughput.</p>
               </div>
             </div>
             <div class="stack-item">
               <div class="stack-title">Capital</div>
               <div>
-                <h3>Patient, mission-aligned capital formation.</h3>
-                <p>Institutional capital architecture, strategic LP relationships, co-investment vehicles and sovereign-adjacent finance structures.</p>
-              </div>
-            </div>
-            <div class="stack-item">
-              <div class="stack-title">Institutions</div>
-              <div>
-                <h3>The governance layer that makes scale possible.</h3>
-                <p>Policy, sovereign engagement, stakeholder alignment, operator networks and the institutional trust required to deploy at national or regional scale.</p>
+                <h3>Innovative Capital Solutions.</h3>
+                <p>Strategic capital solutions using existing LP mandates, co-investments, asset management, private equity and financial services solutions aligned to specific projects.</p>
               </div>
             </div>
           </div>
@@ -597,13 +844,15 @@
       </div>
     </section>
 
+    <!-- QUOTE BAND -->
     <section class="quote-band">
       <div class="container">
-        <div class="quote">"The safest way to predict the future is to invent it. Africa does not need permission to build the next era. It needs the operating system to build on."</div>
-        <div class="eyebrow" style="margin-top: 34px; margin-bottom: 0;">Silla Global founding principle</div>
+        <div class="quote">"Africa does not need to be discovered. It needs to be stewarded. By Africans first. With the world alongside."</div>
+        <div class="eyebrow" style="margin-top: 34px; margin-bottom: 0;">Dr. Khumoetsile Moetse &middot; Group Chairperson, Silla Global</div>
       </div>
     </section>
 
+    <!-- 04 WHO SHOULD APPLY -->
     <section class="block container">
       <div class="section-grid">
         <div class="section-number">04</div>
@@ -622,6 +871,7 @@
                 <li>Institutional capital, project finance, fund architecture or strategic LP relationships.</li>
                 <li>Government, regional economic development, public-private deployment or policy execution.</li>
                 <li>Media, narrative, audience infrastructure or AI-native growth systems.</li>
+                <li>Leadership alignment, mentorship, institutional summits or transformation programmes.</li>
               </ul>
             </div>
             <div class="authority-panel">
@@ -637,29 +887,29 @@
             </div>
           </div>
           <div class="cta-row" style="margin-top: 34px;">
-            <a class="button button-primary" href="#application">Apply for a Frontier Systems Audit</a>
+            <a class="button button-primary" href="#register">Register with Silla Global</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="application" class="block container">
+    <!-- 05 REGISTER -->
+    <section id="register" class="block container">
       <div class="section-grid">
         <div class="section-number">05</div>
         <div>
-          <h2>Apply to work with Silla Global</h2>
+          <h2>Register with Silla Global</h2>
           <div class="serif-copy">
-            <p>Complete the short qualification form below. Your answers help our team assess whether your organisation, project and available implementation capacity match the type of frontier systems mandate we can support.</p>
+            <p>Complete the short qualification form below. Your answers help our team assess whether your organisation, project and available implementation capacity match the type of mandate we can support.</p>
           </div>
           <div class="application-shell">
-            <p class="form-note">This v1 form validates your details and opens a prepared email submission so the Silla Global team can review the mandate. Connect this form to a CRM, database or secure form endpoint when you are ready for production-scale intake.</p>
             <form id="frontierApplication" novalidate>
               <div>
-                <label for="fullName">Full name *</label>
+                <label for="fullName">Full Name *</label>
                 <input id="fullName" name="Full name" type="text" required autocomplete="name">
               </div>
               <div>
-                <label for="email">Work email *</label>
+                <label for="email">Work Email *</label>
                 <input id="email" name="Work email" type="email" required autocomplete="email">
               </div>
               <div>
@@ -667,7 +917,7 @@
                 <input id="organisation" name="Organisation" type="text" required autocomplete="organization">
               </div>
               <div>
-                <label for="role">Your role *</label>
+                <label for="role">Your Role *</label>
                 <input id="role" name="Role" type="text" required placeholder="Founder, CEO, Ministerial advisor, Partner, Operator">
               </div>
               <div>
@@ -675,11 +925,11 @@
                 <input id="website" name="Website or LinkedIn" type="url" placeholder="https://">
               </div>
               <div>
-                <label for="country">Country or region *</label>
+                <label for="country">Country or Region *</label>
                 <input id="country" name="Country or region" type="text" required>
               </div>
               <div>
-                <label for="orgType">Organisation type *</label>
+                <label for="orgType">Organisation Type *</label>
                 <select id="orgType" name="Organisation type" required>
                   <option value="">Select one</option>
                   <option>Government or public institution</option>
@@ -693,12 +943,13 @@
                 </select>
               </div>
               <div>
-                <label for="mandate">Primary mandate *</label>
+                <label for="mandate">Primary Mandate *</label>
                 <select id="mandate" name="Primary mandate" required>
                   <option value="">Select one</option>
+                  <option>Alignment, mentorship or leadership transformation</option>
                   <option>AI, automation or data infrastructure</option>
                   <option>Energy, mobility or charging infrastructure</option>
-                  <option>Critical minerals, logistics or industrial infrastructure</option>
+                  <option>Physical infrastructure, minerals or industrial build-out</option>
                   <option>Capital formation, fund architecture or project finance</option>
                   <option>Government, policy or regional economic deployment</option>
                   <option>Media, narrative, growth or audience infrastructure</option>
@@ -706,7 +957,7 @@
                 </select>
               </div>
               <div>
-                <label for="stage">Current stage *</label>
+                <label for="stage">Current Stage *</label>
                 <select id="stage" name="Current stage" required>
                   <option value="">Select one</option>
                   <option>Idea or early concept</option>
@@ -718,7 +969,7 @@
                 </select>
               </div>
               <div>
-                <label for="capacity">Available mandate or implementation capacity *</label>
+                <label for="capacity">Available Mandate or Implementation Capacity *</label>
                 <select id="capacity" name="Available mandate or implementation capacity" required>
                   <option value="">Select one</option>
                   <option>No committed budget yet</option>
@@ -730,7 +981,7 @@
                 </select>
               </div>
               <div>
-                <label for="authority">Decision authority *</label>
+                <label for="authority">Decision Authority *</label>
                 <select id="authority" name="Decision authority" required>
                   <option value="">Select one</option>
                   <option>I am the final decision-maker</option>
@@ -751,21 +1002,17 @@
                 </select>
               </div>
               <div class="form-full">
-                <label for="summary">Describe the project, company or mandate *</label>
-                <textarea id="summary" name="Project or mandate summary" required placeholder="Tell us what you are building, what problem it solves, what scale it could reach, and why Silla Global is relevant."></textarea>
-              </div>
-              <div class="form-full">
-                <label for="fit">Why should Silla Global consider this? *</label>
-                <textarea id="fit" name="Strategic fit" required placeholder="Explain the strategic fit across AI, infrastructure, capital, policy, media, energy, minerals, mobility or institutional transformation."></textarea>
+                <label for="summary">Describe the Project, Company or Individual Mandate *</label>
+                <textarea id="summary" name="Project or mandate summary" required placeholder="Tell us your problem statement."></textarea>
               </div>
               <div class="form-full checkbox-line">
                 <input id="consent" name="Consent" type="checkbox" required>
-                <span>I confirm that the information submitted is accurate and that Silla Global may review this application to determine whether the mandate qualifies for a Frontier Systems Audit.</span>
+                <span>I confirm that the information submitted is accurate and that Silla Global may review this submission to determine the appropriate solution.</span>
               </div>
-              <div id="formError" class="error-message">Please complete all required fields before submitting your application.</div>
+              <div id="formError" class="error-message">Please complete all required fields before submitting your enquiry.</div>
               <div class="form-full cta-row">
-                <button class="button button-primary" type="submit">Submit application</button>
-                <a class="button button-secondary" href="#thesis">Read thesis again</a>
+                <button class="button button-primary" type="submit">Submit Enquiry</button>
+                <a class="button button-secondary" href="#universe">Read the Silla Universe</a>
               </div>
             </form>
           </div>
@@ -773,29 +1020,54 @@
       </div>
     </section>
 
-    <section id="contact" class="block container">
+    <!-- 06 PARTNERS -->
+    <section id="partners" class="block container">
       <div class="section-grid">
         <div class="section-number">06</div>
         <div>
+          <h2>Silla Partners</h2>
+          <div class="serif-copy">
+            <p>We work with a deliberate set of partners whose mandates align with Africa's infrastructure, intelligence and institutional transition.</p>
+          </div>
+          <div class="partners-strip">
+            <div class="partner-badge">eMobility Botswana</div>
+            <div class="partner-badge">One Stop Energy</div>
+            <div class="partner-badge">Huawei</div>
+            <div class="partner-badge">Skywell</div>
+            <div class="partner-badge">Africa Media Fund</div>
+            <div class="partner-badge">NODE</div>
+            <div class="partner-badge">Hektik</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="block container">
+      <div class="section-grid">
+        <div class="section-number">&nbsp;</div>
+        <div>
           <h2>Contact</h2>
           <div class="serif-copy">
-            <p>We work with a deliberate set of partners. If you are building at the frontier of African infrastructure, intelligence, institutional capital or strategic deployment, complete the application first so the right team can review the mandate.</p>
+            <p>We work with a deliberate set of partners. If you are building at the frontier of African infrastructure, intelligence, institutional capital or strategic deployment, complete the registration form first so the right team can review the mandate.</p>
           </div>
           <div class="cta-row" style="margin-top: 32px;">
-            <a class="button button-primary" href="#application">Apply to work with Silla Global</a>
+            <a class="button button-primary" href="#register">Register with Silla Global</a>
             <a class="button button-secondary" href="mailto:partners@silla.global">Email partners@silla.global</a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="container">
-    <div>2026 © Silla Global</div>
+    <div>2026 &copy; Silla Global</div>
     <div class="footer-links">
-      <a href="#thesis">Thesis</a>
+      <a href="#universe">Silla Universe</a>
+      <a href="#architecture">Architecture</a>
       <a href="/theway">The Way</a>
-      <a href="#application">Apply</a>
+      <a href="#register">Register</a>
       <a href="mailto:partners@silla.global">Contact</a>
     </div>
   </footer>
@@ -803,10 +1075,10 @@
 
 <div id="successModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal-content">
-    <div class="eyebrow">Application received</div>
-    <h2 id="modalTitle">Your application has been completed.</h2>
-    <p>Thank you. The Frontier AI Systems team is now preparing a first-pass review of your organisation, mandate, implementation capacity and strategic fit. If the mandate qualifies, our team will get back to you with the next step.</p>
-    <p>A prepared email draft has also been opened so your application can be sent directly to Silla Global for v1 intake. If the email draft did not open, please send the details manually to partners@silla.global.</p>
+    <div class="eyebrow">Enquiry received</div>
+    <h2 id="modalTitle">Your enquiry has been submitted.</h2>
+    <p>Thank you. The Silla Global team is now reviewing your organisation, mandate, implementation capacity and strategic fit. If the mandate is aligned, our team will get back to you with the next step.</p>
+    <p>A prepared email draft has also been opened so your enquiry can be sent directly to Silla Global. If the email draft did not open, please send the details manually to partners@silla.global.</p>
     <div class="cta-row" style="margin-top: 28px;">
       <button class="button button-primary" type="button" id="closeModal">Close</button>
       <a class="button button-secondary" href="#top">Return to top</a>
@@ -836,9 +1108,9 @@
       return field.name + ': ' + getFieldValue(field);
     });
 
-    const organisation = document.getElementById('organisation').value.trim() || 'New application';
-    const subject = 'Frontier Systems Audit Application | ' + organisation;
-    const body = 'New Silla Global Frontier Systems Audit application\n\n' + lines.join('\n') + '\n\nSubmitted from the Silla Global v1 landing page.';
+    const organisation = document.getElementById('organisation').value.trim() || 'New enquiry';
+    const subject = 'Silla Global Registration Enquiry | ' + organisation;
+    const body = 'New Silla Global registration enquiry\n\n' + lines.join('\n') + '\n\nSubmitted from the Silla Global website.';
 
     return 'mailto:partners@silla.global?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   }
