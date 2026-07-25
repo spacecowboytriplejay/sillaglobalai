@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Silla Green · We turn electrons into economic throughput</title>
+<meta name="description" content="Silla Green builds the renewable energy and EV charging infrastructure that powers Africa's mobility. Powered by Huawei Digital Power. A Silla Global company." />
+<style>
+  :root{
+    --bg:#04120c; --bg2:#061a10; --panel:#082018; --line:#123528; --ink:#eaf6ef; --muted:#8fb6a3;
+    --gold:#e3b341; --gold2:#f0c85f; --green:#3be38a; --green2:#7cf5b0; --green-deep:#0e7a4e;
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wave{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(1200px 700px at 70% 10%,rgba(59,227,138,.10),transparent 60%),
+    radial-gradient(900px 600px at 10% 90%,rgba(227,179,65,.06),transparent 60%)}
+  .wrap{position:relative;z-index:2}
+  .container{max-width:1200px;margin:0 auto;padding:0 28px}
+  /* nav */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(10px);
+    background:linear-gradient(180deg,rgba(4,18,12,.86),rgba(4,18,12,.2));border-bottom:1px solid rgba(18,53,40,.6)}
+  .nav{display:flex;align-items:center;gap:26px;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:.5px}
+  .mark{width:30px;height:30px;flex:none}
+  .brand b{font-size:16px}.brand span{color:var(--green)}
+  nav.links{display:flex;gap:26px;margin-left:14px}
+  nav.links a{font-size:13.5px;color:var(--muted);font-weight:500;transition:.15s}
+  nav.links a:hover{color:var(--ink)}
+  .spacer{flex:1}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;border-radius:10px;padding:11px 20px;cursor:pointer;border:1px solid transparent;transition:.18s}
+  .btn-gold{background:var(--gold);color:#1a1205;box-shadow:0 6px 24px rgba(227,179,65,.28)}
+  .btn-gold:hover{background:var(--gold2);transform:translateY(-1px);box-shadow:0 10px 30px rgba(227,179,65,.36)}
+  .btn-green{background:transparent;color:var(--green2);border-color:rgba(59,227,138,.4)}
+  .btn-green:hover{background:rgba(59,227,138,.1);border-color:var(--green)}
+  /* hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:70px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;width:100%}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:2.5px;color:var(--green2);
+    text-transform:uppercase;font-weight:600;margin-bottom:22px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(59,227,138,.5)}70%{box-shadow:0 0 0 9px rgba(59,227,138,0)}100%{box-shadow:0 0 0 0 rgba(59,227,138,0)}}
+  h1.hero-h{font-size:clamp(38px,5.2vw,66px);line-height:1.02;letter-spacing:-1.5px;margin:0 0 22px;font-weight:800}
+  h1.hero-h .g{color:var(--gold)}
+  h1.hero-h .e{color:var(--green)}
+  .lede{font-size:clamp(15px,1.5vw,18px);color:#bcd6c8;line-height:1.6;max-width:520px;margin:0 0 30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
+  .stats{display:flex;gap:28px;flex-wrap:wrap}
+  .stat .n{font-size:13px;font-weight:700;color:var(--gold)}
+  .stat .l{font-size:11.5px;color:var(--muted);letter-spacing:.5px;margin-top:2px}
+  /* globe + electron */
+  .stage{position:relative;height:min(76vh,640px);display:grid;place-items:center}
+  #globe{position:absolute;inset:0}
+  .orbit{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;pointer-events:none}
+  .electron{position:absolute;width:15px;height:15px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,#d9ffe9,var(--green) 55%,#0e7a4e);
+    box-shadow:0 0 16px 3px rgba(59,227,138,.75);will-change:transform,opacity}
+  /* sections */
+  section{position:relative;padding:110px 0}
+  .snum{font-size:12px;letter-spacing:3px;color:var(--green2);font-weight:600}
+  .stitle{font-size:clamp(26px,3.4vw,42px);letter-spacing:-1px;margin:12px 0 18px;font-weight:800;max-width:720px;line-height:1.08}
+  .ssub{color:var(--muted);font-size:16px;max-width:620px;line-height:1.6}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+  .card{background:linear-gradient(180deg,rgba(8,32,24,.9),rgba(6,26,16,.7));border:1px solid var(--line);
+    border-radius:var(--radius);padding:24px;transition:.2s}
+  .card:hover{border-color:rgba(59,227,138,.4);transform:translateY(-3px)}
+  .card .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+    background:rgba(59,227,138,.1);border:1px solid rgba(59,227,138,.25);color:var(--green2);font-size:20px}
+  .card h4{margin:0 0 8px;font-size:16.5px}
+  .card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.55}
+  /* corridor band */
+  .band{background:linear-gradient(120deg,#061a10,#0a2418);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .corridor{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+  .corridor ul{list-style:none;padding:0;margin:20px 0 0}
+  .corridor li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;color:#c8ded2;font-size:15px}
+  .corridor li .c{color:var(--green);font-weight:800;flex:none}
+  .flow{position:relative;height:280px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#04120c}
+  /* electron layer feature */
+  .elayer{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+  .atomwrap{position:relative;height:320px;display:grid;place-items:center}
+  /* partners */
+  .partners{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+  .plogo{border:1px solid var(--line);border-radius:12px;padding:16px 22px;font-weight:700;letter-spacing:.5px;color:#cfe4d8;font-size:15px;background:rgba(8,32,24,.5)}
+  .plogo.primary{border-color:rgba(227,179,65,.5);color:var(--gold2)}
+  /* cta */
+  .ctaband{text-align:center;padding:100px 0}
+  .ctaband h2{font-size:clamp(28px,4vw,48px);letter-spacing:-1px;margin:0 0 16px;font-weight:800}
+  .ctaband h2 .g{color:var(--gold)}
+  .ctaband p{color:var(--muted);max-width:560px;margin:0 auto 30px;font-size:16px}
+  footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:13px}
+  .frow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+  .frow .mono{letter-spacing:1.5px;font-size:11px}
+  @media(max-width:900px){
+    .hero-grid,.corridor,.elayer{grid-template-columns:1fr}
+    .stage{height:52vh;order:-1}
+    nav.links{display:none}
+    .cards{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:560px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<canvas class="wave" id="wave"></canvas>
+<div class="grain"></div>
+
+<div class="wrap">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <svg class="mark" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="17" stroke="#e3b341" stroke-width="1.6" opacity=".85"/>
+          <ellipse cx="24" cy="24" rx="17" ry="6.5" stroke="#3be38a" stroke-width="1.4" opacity=".6" transform="rotate(-25 24 24)"/>
+          <path d="M24 15c5 3 6 9 0 18-6-9-5-15 0-18z" fill="#3be38a" opacity=".9"/>
+          <circle cx="38" cy="17" r="2.6" fill="#7cf5b0"/>
+        </svg>
+        <div><b>SILLA <span>GREEN</span></b></div>
+      </a>
+      <nav class="links">
+        <a href="#what">What we do</a>
+        <a href="#corridor">Green Corridors</a>
+        <a href="#electron">The Electron Layer</a>
+        <a href="#partners">Partners</a>
+      </nav>
+      <div class="spacer"></div>
+      <a class="btn btn-gold" href="#contact">Partner with us</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span>Renewable Energy · E-Mobility · Charging Infrastructure</div>
+        <h1 class="hero-h">We turn <span class="e">electrons</span> into <span class="g">economic throughput</span>.</h1>
+        <p class="lede">Silla Green builds the renewable energy and electric-vehicle charging infrastructure that powers Africa's mobility. Generation, storage and distribution, wrapped in an AI utility layer. Powered by Huawei Digital Power.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="#contact">Partner with us →</a>
+          <a class="btn btn-green" href="#what">See the vision</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="n">Huawei Digital Power</div><div class="l">Technology partner</div></div>
+          <div class="stat"><div class="n">Green Corridors</div><div class="l">Bus · Taxi · Fleet</div></div>
+          <div class="stat"><div class="n">Built from Africa</div><div class="l">Deployed globally</div></div>
+        </div>
+      </div>
+      <div class="stage">
+        <div id="globe"></div>
+        <div class="orbit" id="orbit">
+          <svg width="1" height="1"></svg>
+          <div class="electron" id="electron"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section id="what">
+    <div class="container">
+      <div class="snum">01 / WHAT WE DO</div>
+      <h2 class="stitle">The full green energy stack, for mobility and industry.</h2>
+      <p class="ssub">Generation, storage, distribution and intelligence, delivered as one integrated system on Huawei Digital Power technology.</p>
+      <div class="cards">
+        <div class="card"><div class="ico">☀</div><h4>Solar Generation</h4><p>Clean generation at scale with Huawei inverters and transformers, sized for depots, corridors and industry.</p></div>
+        <div class="card"><div class="ico">▮</div><h4>Battery Storage</h4><p>Grid and off-grid storage that keeps fleets charged through peak and outage, engineered for Africa's demand.</p></div>
+        <div class="card"><div class="ico">⚡</div><h4>EV Charging Networks</h4><p>Fast charging for buses, taxis and fleets. Zero to eighty in thirty-five to forty-five minutes, at the depot and on route.</p></div>
+        <div class="card"><div class="ico">◍</div><h4>Energy Management</h4><p>The AI utility layer that meters, balances and monetises every electron across the network.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GREEN CORRIDORS -->
+  <section class="band" id="corridor">
+    <div class="container corridor">
+      <div>
+        <div class="snum">02 / GREEN CORRIDORS</div>
+        <h2 class="stitle">We electrify how Africa moves.</h2>
+        <p class="ssub">Green corridor access, electric mobility and AI logistics, connecting depots, routes and borders on renewable power.</p>
+        <ul>
+          <li><span class="c">→</span> Fleet electrification for public transport buses and minibus taxis.</li>
+          <li><span class="c">→</span> Depot and on-route charging backed by solar and storage.</li>
+          <li><span class="c">→</span> Cross-border green corridors, powered end to end.</li>
+          <li><span class="c">→</span> AI fare collection and logistics that turn energy into throughput.</li>
+        </ul>
+      </div>
+      <div class="flow"><canvas id="flow" style="width:100%;height:100%;display:block"></canvas></div>
+    </div>
+  </section>
+
+  <!-- THE ELECTRON LAYER -->
+  <section id="electron">
+    <div class="container elayer">
+      <div class="atomwrap"><canvas id="atom" width="320" height="320" style="max-width:100%"></canvas></div>
+      <div>
+        <div class="snum">03 / THE ELECTRON LAYER</div>
+        <h2 class="stitle">The layer between green energy and the economy.</h2>
+        <p class="ssub">Every electron we generate is metered, balanced and monetised by our AI utility platform: fare collection, energy trading, real-time intelligence. Green power becomes measurable economic throughput. This is the electron layer, where the green meets the machine.</p>
+        <div class="cta-row" style="margin-top:26px"><a class="btn btn-green" href="#contact">Talk to us about your corridor</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="band" id="partners">
+    <div class="container">
+      <div class="snum">04 / POWERED BY</div>
+      <h2 class="stitle">Great partners. Real infrastructure.</h2>
+      <p class="ssub">We deliver on the technology and the relationships that make green corridors real, from the grid to the road.</p>
+      <div class="partners">
+        <div class="plogo primary">HUAWEI Digital Power</div>
+        <div class="plogo">Black Renaissance</div>
+        <div class="plogo">eMobility Botswana</div>
+        <div class="plogo">One Stop Energy</div>
+        <div class="plogo">Skywell</div>
+        <div class="plogo">Silla Global</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="ctaband" id="contact">
+    <div class="container">
+      <div class="snum" style="text-align:center">05 / BUILD WITH US</div>
+      <h2>Build the <span class="g">green corridor</span> with us.</h2>
+      <p>Silla Green partners with governments, operators, funders and infrastructure builders electrifying Africa's mobility. If that is you, let us talk.</p>
+      <a class="btn btn-gold" href="mailto:partners@silla.global?subject=Silla%20Green%20Partnership" style="font-size:15px;padding:14px 28px">Partner with Silla Green →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container frow">
+      <div class="brand"><svg class="mark" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="#e3b341" stroke-width="1.6" opacity=".85"/><ellipse cx="24" cy="24" rx="17" ry="6.5" stroke="#3be38a" stroke-width="1.4" opacity=".6" transform="rotate(-25 24 24)"/><path d="M24 15c5 3 6 9 0 18-6-9-5-15 0-18z" fill="#3be38a" opacity=".9"/><circle cx="38" cy="17" r="2.6" fill="#7cf5b0"/></svg><div><b>SILLA <span style="color:var(--green)">GREEN</span></b></div></div>
+      <div class="mono">A SILLA GLOBAL COMPANY · BUILT FROM AFRICA · DEPLOYED GLOBALLY</div>
+      <div><a href="mailto:partners@silla.global">partners@silla.global</a></div>
+    </div>
+  </footer>
+</div>
+
+<script src="https://unpkg.com/globe.gl"></script>
+<script>
+/* ---------- WAVE BACKGROUND (subtle, Osmantic-style) ---------- */
+(function(){
+  const c=document.getElementById('wave'), x=c.getContext('2d'); let w,h,t=0;
+  function size(){w=c.width=innerWidth;h=c.height=innerHeight;} size(); addEventListener('resize',size);
+  function line(off,amp,speed,col,alpha){
+    x.beginPath();
+    for(let i=0;i<=w;i+=8){
+      const y=h*0.5+off + Math.sin(i*0.004 + t*speed)*amp + Math.sin(i*0.0016 + t*speed*0.6)*amp*0.6;
+      i===0?x.moveTo(i,y):x.lineTo(i,y);
+    }
+    x.strokeStyle=col;x.globalAlpha=alpha;x.lineWidth=1.4;x.stroke();
+  }
+  (function loop(){
+    x.clearRect(0,0,w,h);
+    line(-60,60,0.012,'#3be38a',0.16);
+    line(30,90,0.009,'#0e7a4e',0.20);
+    line(120,70,0.014,'#e3b341',0.07);
+    line(200,110,0.007,'#19c6a0',0.12);
+    x.globalAlpha=1; t++; requestAnimationFrame(loop);
+  })();
+})();
+
+/* ---------- HERO GLOBE + ELECTRON ---------- */
+let world;
+function initGlobe(){
+  const el=document.getElementById('globe');
+  world=Globe()(el)
+    .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+    .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+    .backgroundColor('rgba(0,0,0,0)')
+    .atmosphereColor('#3be38a').atmosphereAltitude(0.28)
+    .showGraticules(false)
+    .ringLat('lat').ringLng('lng')
+    .ringColor(()=> (t)=>`rgba(59,227,138,${1-t})`)
+    .ringMaxRadius(7).ringPropagationSpeed(2.2).ringRepeatPeriod(1100)
+    .ringsData([{lat:2,lng:20}]) // Africa
+    .pointsData([{lat:2,lng:20}]).pointLat('lat').pointLng('lng').pointColor(()=>'#7cf5b0').pointRadius(0.7).pointAltitude(0.01);
+  fit();
+  world.pointOfView({lat:6,lng:18,altitude:2.3},0);
+  const ctr=world.controls(); ctr.autoRotate=true; ctr.autoRotateSpeed=0.5; ctr.enableZoom=false; ctr.enablePan=false;
+}
+function fit(){ if(!world)return; const s=document.querySelector('.stage'); world.width(s.clientWidth).height(s.clientHeight); }
+addEventListener('resize',fit);
+
+/* electron orbit (fake 3D depth) */
+(function(){
+  const stage=document.querySelector('.stage'), e=document.getElementById('electron');
+  let a=0;
+  function frame(){
+    const W=stage.clientWidth, H=stage.clientHeight, cx=W/2, cy=H/2;
+    const rx=Math.min(W,H)*0.46, ry=rx*0.30;
+    a+=0.016;
+    const x=cx+Math.cos(a)*rx, y=cy+Math.sin(a)*ry - Math.min(W,H)*0.02;
+    const depth=(Math.sin(a)+1)/2;              // 0 back .. 1 front
+    const sc=0.6+depth*0.9, op=0.45+depth*0.55;
+    e.style.transform=`translate(${x-7.5}px,${y-7.5}px) scale(${sc})`;
+    e.style.opacity=op;
+    e.style.zIndex = depth>0.5 ? 5 : 1;
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
+
+/* ---------- GREEN CORRIDOR FLOW (moving electrons along a path) ---------- */
+(function(){
+  const c=document.getElementById('flow'); if(!c)return; const x=c.getContext('2d'); let w,h;
+  function size(){const r=c.getBoundingClientRect();w=c.width=r.width;h=c.height=r.height;} size(); addEventListener('resize',size);
+  const dots=Array.from({length:14},(_,i)=>({p:i/14,s:0.0016+Math.random()*0.0018,y:0.3+Math.random()*0.4}));
+  function path(px){return { x:px*w, y:h*(0.5 + Math.sin(px*6.28)*0.16 + Math.sin(px*12)*0.05) }; }
+  (function loop(){
+    x.clearRect(0,0,w,h);
+    // route line
+    x.beginPath(); for(let i=0;i<=1;i+=0.01){const p=path(i);i===0?x.moveTo(p.x,p.y):x.lineTo(p.x,p.y);}
+    x.strokeStyle='rgba(59,227,138,.25)';x.lineWidth=1.5;x.stroke();
+    dots.forEach(d=>{ d.p+=d.s; if(d.p>1)d.p=0; const p=path(d.p);
+      x.beginPath();x.arc(p.x,p.y,3,0,6.28);
+      x.fillStyle='#7cf5b0';x.shadowColor='#3be38a';x.shadowBlur=12;x.fill();x.shadowBlur=0; });
+    requestAnimationFrame(loop);
+  })();
+})();
+
+/* ---------- ELECTRON LAYER: atom ---------- */
+(function(){
+  const c=document.getElementById('atom'); if(!c)return; const x=c.getContext('2d'); const W=c.width,H=c.height,cx=W/2,cy=H/2;
+  let a=0;
+  const orbits=[{rx:120,ry:44,rot:0,sp:1},{rx:120,ry:44,rot:Math.PI/3,sp:-0.8},{rx:120,ry:44,rot:-Math.PI/3,sp:0.6}];
+  (function loop(){
+    x.clearRect(0,0,W,H); a+=0.02;
+    orbits.forEach((o,i)=>{
+      x.save();x.translate(cx,cy);x.rotate(o.rot);
+      x.beginPath();x.ellipse(0,0,o.rx,o.ry,0,0,6.28);x.strokeStyle='rgba(227,179,65,.28)';x.lineWidth=1;x.stroke();
+      const ang=a*o.sp+i;const ex=Math.cos(ang)*o.rx,ey=Math.sin(ang)*o.ry;
+      x.beginPath();x.arc(ex,ey,4.5,0,6.28);x.fillStyle='#7cf5b0';x.shadowColor='#3be38a';x.shadowBlur=14;x.fill();x.shadowBlur=0;
+      x.restore();
+    });
+    // nucleus (green leaf spark + gold ring)
+    x.beginPath();x.arc(cx,cy,10,0,6.28);x.fillStyle='#3be38a';x.shadowColor='#3be38a';x.shadowBlur=22;x.fill();x.shadowBlur=0;
+    x.beginPath();x.arc(cx,cy,4,0,6.28);x.fillStyle='#eaffef';x.fill();
+    requestAnimationFrame(loop);
+  })();
+})();
+
+initGlobe();
+</script>
+</body>
+</html>
